@@ -14,4 +14,6 @@ const test = () => {
 };
 const count = ref(0);
 </script>
-<style scoped></style>
+<style scoped>
+
+</style>
