@@ -1,10 +1,8 @@
 <template>
-  <Button label="Submit" />
+  {{ msg }}
 </template>
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
-
-import Button from "primevue/button";
 
 defineProps<{ msg: string }>();
 
@@ -16,4 +14,6 @@ const test = () => {
 };
 const count = ref(0);
 </script>
-<style scoped></style>
+<style scoped>
+
+</style>
