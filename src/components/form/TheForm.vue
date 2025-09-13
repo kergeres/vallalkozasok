@@ -32,6 +32,8 @@ const message = ref("Loading...");
 
 // Firebase reference a "some/path/to/data" helyett
 const messageRef = dbRef(database, "message");
+const entriesRef = dbRef(database, "entries");
+
 
 // Realtime listener
 const updateMessage = (snapshot: any) => {
@@ -39,7 +41,9 @@ const updateMessage = (snapshot: any) => {
 };
 
 onMounted(() => {
-  onValue(messageRef, updateMessage);
+  onValue(entriesRef, (snapshot) => {
+  console.log("Snapshot:", snapshot.val());
+});
 });
 
 onUnmounted(() => {
